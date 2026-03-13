@@ -14,7 +14,7 @@ import { FolderIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 export default function Home() {
   const socialLinks = [
     { title: "GitHub", icon: <GithubIcon size={24} />, href: "https://github.com/loopbutinfinite" },
-    { title: "Resume", icon: <FolderIcon size={24} />, href: "/assets/Brandon_EstradaResume.pdf" },
+    { title: "Resume", icon: <FolderIcon size={24} />, href: "https://docs.google.com/document/d/1cjeaB49VrEQPYVjy3cmvY61onA2ww5HiybgMxBPR12o/edit?usp=sharing" },
     { title: "LinkedIn", icon: <LinkedinIcon size={24} />, href: "https://www.linkedin.com/in/brandon-estrada-976546266/" },
   ];
   return (
