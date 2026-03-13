@@ -89,11 +89,12 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
   );
 }
 
-const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const words = ["Brandon", "Estrada"];
+
 export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
+    result += words[Math.floor(Math.random() * words.length)];
   }
   return result;
 };

@@ -22,7 +22,7 @@ const FooterSection = () => {
                     </div>
                     <div className='flex gap-3 mb-5'>
                         <MailIcon></MailIcon>
-                        <p>bestrada8800@gmail.com</p>
+                        <a href="mailto:bestrada8800@gmail.com"><p>bestrada8800@gmail.com</p></a>
                     </div>
                 </div>
                 <FooterCopyright href="#NavBar" by="Brandon Estrada™" year={2026} />

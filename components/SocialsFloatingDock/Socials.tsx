@@ -32,12 +32,10 @@ const FloatingDockDesktop = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  // 1. Changed mouseX to mouseY
   const mouseY = useMotionValue(Infinity);
 
 return (
   <motion.div
-    // CHANGE: Use clientY instead of pageY
     onMouseMove={(e) => mouseY.set(e.clientY)} 
     onMouseLeave={() => mouseY.set(Infinity)}
     className={cn(
@@ -65,7 +63,6 @@ function IconContainer({
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
-  // 2. Logic changed to calculate distance based on the Y coordinate
   let distance = useTransform(mouseY, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
     return val - bounds.y - bounds.height / 2;
@@ -80,7 +77,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -95,7 +92,6 @@ function IconContainer({
               animate={{ opacity: 1, x: -10, y: "-50%" }}
               exit={{ opacity: 0, x: 10, y: "-50%" }}
               style={{ top: "50%" }}
-              // 3. Positioned to the left (right-full) so it doesn't go off-screen
               className="px-2 py-0.5 whitespace-pre rounded-md bg-slate-900 border border-slate-700 text-white absolute right-full mr-2 w-fit text-xs"
             >
               {title}
