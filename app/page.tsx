@@ -11,13 +11,6 @@ import { GravityStarsBackgroundDemo } from "@/components/StarsBackground/StarsBa
 import { Code } from "lucide-react";
 import { FolderIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 
-//Sections we need:
-//About me section
-//Projects section
-//Skills Section
-//Contact info (phone number, email)
-//Links to LinkedIn, GitHub, and Resume
-
 export default function Home() {
   const socialLinks = [
     { title: "GitHub", icon: <GithubIcon size={24} />, href: "https://github.com/loopbutinfinite" },
