@@ -54,7 +54,9 @@ const AboutMe = () => {
                         <div>
                             <h5 className='text-[32px] text-white mb-4'>Languages</h5>
                             <div className='flex gap-4 flex-wrap'>
-                                <img alt='CSharp Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                                <img alt='SQL Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                                <img alt='C-Sharp Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                                <img alt='JavaScript Logo' width={50} height={50}  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
                                 <img alt='CSS3 Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                                 <img alt='HTML 5 Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
                             </div>
@@ -70,7 +72,12 @@ const AboutMe = () => {
                         <div>
                             <h5 className='text-[32px] text-white mb-4'>Productivity</h5>
                             <div className='flex gap-4 flex-wrap'>
-                                {/* <img alt="Mapbox Logo" width={50} height={50} src="/assets/mapbox-icon.svg" /> */}
+                                <img alt='Unity Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" />
+                                <i className="text-[50px] font-[50px] devicon-vercel-original-wordmark"></i>
+                                <img alt="Vite.js Logo" width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
+                                <img alt="Git Logo" width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                                <img alt="Mapbox Logo" width={50} height={50} src="/assets/mapbox-icon.svg" />
+                                <img alt='Slack Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg" />
                                 <img alt='Postman Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
                                 <img alt='VS Code Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
                                 <img alt='Github Logo' width={50} height={50} src="/assets/github-icon.svg" />

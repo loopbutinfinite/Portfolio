@@ -14,7 +14,7 @@ import { FolderIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 export default function Home() {
   const socialLinks = [
     { title: "GitHub", icon: <GithubIcon size={24} />, href: "https://github.com/loopbutinfinite" },
-    { title: "Resume", icon: <FolderIcon size={24} />, href: "https://docs.google.com/document/d/1cjeaB49VrEQPYVjy3cmvY61onA2ww5HiybgMxBPR12o/edit?usp=sharing" },
+    { title: "Resume", icon: <FolderIcon size={24} />, href: "https://docs.google.com/document/d/1dH3ILX4xA-5c9EPnsSiM2vxrCxvp1foiVt-e6jkO7e4/edit?usp=sharing" },
     { title: "LinkedIn", icon: <LinkedinIcon size={24} />, href: "https://www.linkedin.com/in/brandon-estrada-976546266/" },
   ];
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       <div id="ProjectsSection" className="pb-30 py-5 pt-20">
         <div className="flex mt-15 lg:justify-start justify-center">
           <h3 className="text-7xl lg:text-9xl font-serif lg:ms-20 z-10">Projects</h3>
-          <Code className="z-10" color="#A855F7" size={56} strokeWidth={1.5}></Code>
+          {/* <Code className="z-10" color="#A855F7" size={56} strokeWidth={1.5}></Code> */}
         </div>
         <div className="grid grid-cols-1 lg:grid-rows-1 grid-rows-3 lg:grid-cols-3 justify-center gap-3">
           <Project1 />
