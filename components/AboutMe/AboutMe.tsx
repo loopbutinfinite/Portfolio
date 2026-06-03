@@ -36,7 +36,7 @@ const AboutMe = () => {
                         <h1 className='text-6xl text-center lg:text-7xl mb-3 font-serif'>Brandon Estrada</h1>
                         <h3 className='text-center text-4xl lg:text-[56px] mb-3'>Code-First Learning</h3>
                         <p className='text-2xl mx-5 md:mx-0 text-center text-white bg-slate-800/40 p-4 rounded-2xl'>
-                            I've been passionate about tech on the consumer level, which started the interest in learning more about tech on the developer side. To deepen my skills, I joined CodeStack Academy to become a software engineer. My time at CodeStack has allowed me to learn various concepts and languages such as C#, HTML/CSS, JavaScript, and Next.js framework. My goal after the academy is to join the tech industry as a developer and help improve the user experience whether it be through front-end or back-end development.
+                            I've been passionate about tech on the consumer level, which started the interest in learning more about tech on the developer side. To deepen my skills, I joined CodeStack Academy with the hopes of becoming a software engineer. During my time at CodeStack, I was able to learn various concepts and languages such as C#, HTML/CSS, JavaScript, and Next.js framework. I also had hands-on experience working with services and technologies that are used widely in the industry such as Microsoft Azure, Azure Data Studio, Git, and PostMan.
                         </p>
                     </div>
                 </div>
@@ -56,9 +56,11 @@ const AboutMe = () => {
                             <div className='flex gap-4 flex-wrap'>
                                 <img alt='SQL Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
                                 <img alt='C-Sharp Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-                                <img alt='JavaScript Logo' width={50} height={50}  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                <img alt='JavaScript Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
                                 <img alt='CSS3 Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
                                 <img alt='HTML 5 Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                <img alt='TypeScript Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+
                             </div>
                         </div>
                         <div>
@@ -81,6 +83,9 @@ const AboutMe = () => {
                                 <img alt='Postman Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
                                 <img alt='VS Code Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
                                 <img alt='Github Logo' width={50} height={50} src="/assets/github-icon.svg" />
+                                <img alt='Azure SQL Database Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                                <img alt='Microsoft Azure Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
+                                <img alt='Azure DevOps Logo' width={50} height={50} src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg" />
                             </div>
                         </div>
                     </div>
