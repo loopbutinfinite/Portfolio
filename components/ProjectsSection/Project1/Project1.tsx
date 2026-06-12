@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Project1() {
   return (
-    <Link href={"https://witty-plant-0ebc80610.6.azurestaticapps.net/"} target="_blank">
+    <Link href={"https://h2ohackathon-waterwise.vercel.app/"} target="_blank">
       <CardContainer className="inter-var">
         <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-110 rounded-xl p-6 border py-7">
           <CardItem
