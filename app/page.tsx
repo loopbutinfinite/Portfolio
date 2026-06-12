@@ -1,22 +1,20 @@
 import AboutMe from "@/components/AboutMe/AboutMe";
 import { BubbleBackground } from "@/components/animate-ui/components/backgrounds/bubble";
-import { LightRaysBackground } from "@/components/animate-ui/components/backgrounds/lightrays-background";
 import FooterSection from "@/components/Footer/Footer";
 import NavBar from "@/components/NavBar/NavBar";
 import { Project1 } from "@/components/ProjectsSection/Project1/Project1";
 import { Project2 } from "@/components/ProjectsSection/Project2/Project2";
 import { Project3 } from "@/components/ProjectsSection/Project3/Project3";
 import { Socials } from "@/components/SocialsFloatingDock/Socials";
-import { GravityStarsBackgroundDemo } from "@/components/StarsBackground/StarsBackground";
-import { Code } from "lucide-react";
-import { FolderIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
+import { DownloadIcon, FileTextIcon, FolderIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 
 export default function Home() {
   const socialLinks = [
-    { title: "GitHub", icon: <GithubIcon size={24} />, href: "https://github.com/loopbutinfinite" },
-    { title: "Resume", icon: <FolderIcon size={24} />, href: "https://docs.google.com/document/d/1dH3ILX4xA-5c9EPnsSiM2vxrCxvp1foiVt-e6jkO7e4/edit?usp=sharing" },
-    { title: "LinkedIn", icon: <LinkedinIcon size={24} />, href: "https://www.linkedin.com/in/brandon-estrada-976546266/" },
-  ];
+  { title: "GitHub", icon: <GithubIcon size={24} />, href: "https://github.com/loopbutinfinite" },
+  { title: "View Resume", icon: <FileTextIcon size={24} />, href: "/resume.pdf" },
+  { title: "Download Resume", icon: <DownloadIcon size={24} />, href: "/resume.pdf", download: "Brandon_Estrada_Resume.pdf" },
+  { title: "LinkedIn", icon: <LinkedinIcon size={24} />, href: "https://www.linkedin.com/in/brandon-estrada-976546266/" },
+];
   return (
     <div className="bg-[#0B0E14]">
       <NavBar />

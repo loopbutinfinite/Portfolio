@@ -15,7 +15,7 @@ export const Socials = ({
   items,
   desktopClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string; download?: string }[];
   desktopClassName?: string;
 }) => {
   return (
@@ -34,20 +34,20 @@ const FloatingDockDesktop = ({
 }) => {
   const mouseY = useMotionValue(Infinity);
 
-return (
-  <motion.div
-    onMouseMove={(e) => mouseY.set(e.clientY)} 
-    onMouseLeave={() => mouseY.set(Infinity)}
-    className={cn(
-      "mx-auto flex flex-col h-fit gap-4 items-center rounded-3xl bg-slate-950/40 border border-white/10 backdrop-blur-md px-4 py-4",
-      className
-    )}
-  >
-    {items.map((item) => (
-      <IconContainer mouseY={mouseY} key={item.title} {...item} />
-    ))}
-  </motion.div>
-);
+  return (
+    <motion.div
+      onMouseMove={(e) => mouseY.set(e.clientY)}
+      onMouseLeave={() => mouseY.set(Infinity)}
+      className={cn(
+        "mx-auto flex flex-col h-fit gap-4 items-center rounded-3xl bg-slate-950/40 border border-white/10 backdrop-blur-md px-4 py-4",
+        className
+      )}
+    >
+      {items.map((item) => (
+        <IconContainer mouseY={mouseY} key={item.title} {...item} />
+      ))}
+    </motion.div>
+  );
 };
 
 function IconContainer({
@@ -55,11 +55,13 @@ function IconContainer({
   title,
   icon,
   href,
+  download,
 }: {
   mouseY: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  download?: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -76,32 +78,44 @@ function IconContainer({
 
   const [hovered, setHovered] = useState(false);
 
-  return (
-    <Link href={href} target="_blank">
-      <motion.div
-        ref={ref}
-        style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-slate-800 flex items-center justify-center relative border border-white/10"
-      >
-        <AnimatePresence>
-          {hovered && (
-            <motion.div
-              initial={{ opacity: 0, x: 10, y: "-50%" }}
-              animate={{ opacity: 1, x: -10, y: "-50%" }}
-              exit={{ opacity: 0, x: 10, y: "-50%" }}
-              style={{ top: "50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-slate-900 border border-slate-700 text-white absolute right-full mr-2 w-fit text-xs"
-            >
-              {title}
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <motion.div className="flex items-center justify-center text-white">
-          {icon}
-        </motion.div>
+  const content = (
+    <motion.div
+      ref={ref}
+      style={{ width, height }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="aspect-square rounded-full bg-slate-800 flex items-center justify-center relative border border-white/10"
+    >
+      <AnimatePresence>
+        {hovered && (
+          <motion.div
+            initial={{ opacity: 0, x: 10, y: "-50%" }}
+            animate={{ opacity: 1, x: -10, y: "-50%" }}
+            exit={{ opacity: 0, x: 10, y: "-50%" }}
+            style={{ top: "50%" }}
+            className="px-2 py-0.5 whitespace-pre rounded-md bg-slate-900 border border-slate-700 text-white absolute right-full mr-2 w-fit text-xs"
+          >
+            {title}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <motion.div className="flex items-center justify-center text-white">
+        {icon}
       </motion.div>
+    </motion.div>
+  );
+
+  if (download) {
+    return (
+      <a href={href} download={download}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} target="_blank" rel="noopener noreferrer">
+      {content}
     </Link>
   );
 }
